@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="./assets/img/4geeks.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>random card</title>
+    <title>random card generator</title>
 
     <!-- Fontawesome is our recomended library for icons -->
     <link
@@ -13,16 +13,83 @@
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0a8740;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+    }
+
+    .card {
+      width: 200px;
+      height: 300px;
+      background: white;
+      border: 2px solid black;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    .card-top {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 5rem;
+    }
+
+    .card-bottom {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 5rem;
+      transform: rotate(180deg);
+    }
+
+    .card-value {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .black {
+      color: black;
+    }
+     @media (max-width: 500px) {
+      .card {
+        width: 150px;
+        height: 225px;
+      }
+
+      .card-value {
+        font-size: 2.5rem;
+      }
+
+      .card-top,
+      .card-bottom {
+        font-size: 1.2rem;
+      }
+  </style>
   </head>
   <body>
     <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
+     <h1 class="mt-5 text-center"></h1>
+    <div class="container-fluid text-center d-flex justify-content-center">  
+      <div class="w-20 card" style="height: 16rem;">
+        <div class="card-top ">♣</div>
+        <div class="card-value">5</div>
+        <div class="card-bottom">♣</div>
+      </div>
       <div class="fixed-bottom p-4">
         Made with ❤️ by
         <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
