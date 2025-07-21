@@ -53,5 +53,5 @@ window.onload = function () {
   bottomSuit.textContent = chosenSuit.label;
   topSuit.style.color = chosenSuit.color;
   bottomSuit.style.color = chosenSuit.color;
-  console.log("suit: ", chosenSuit.label, "value: ", chosenValue);
+  // console.log("suit: ", chosenSuit.label, "value: ", chosenValue);
 };
